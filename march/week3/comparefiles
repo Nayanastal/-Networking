@@ -1,0 +1,21 @@
+echo "enter 1st file name: "
+read file1
+echo "enter 2nd file name:"
+read file2
+
+if  cmp -s "$file1" "$file2" ; then
+        echo "both files are same"
+else
+        echo "bothe files are different"
+fi
+
+-----------------------------------------------------------------------------------------
+output:
+
+[mca@localhost ~]$ vi compare.sh
+[mca@localhost ~]$ bash compare.sh
+enter 1st file name: 
+directory.sh
+enter 2nd file name:
+directory.sh
+both files are same
