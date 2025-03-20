@@ -1,0 +1,24 @@
+echo "Enter the file name: "
+read file
+
+if [ -d "$file" ]; then
+    echo "The file is a directory"
+else
+    echo "The file is not a directory"
+fi
+
+                
+
+--------------------------------------------------------------------------------------------------
+
+output:
+
+[mca@localhost ~]$ vi dirtry.sh
+[mca@localhost ~]$ bash dirtry.sh
+Enter the file name: 
+direactory.sh
+The file is not a directory
+[mca@localhost ~]$ bash dirtry.sh
+Enter the file name: 
+mca
+The file is a directory
