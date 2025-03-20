@@ -1,0 +1,29 @@
+#!/bin/bash
+
+
+num1=0
+num2=1
+sum=0
+
+
+echo "Fibonacci series up to 10:"
+while [ $num1 -le 10 ]; do
+    echo -n "$num1 "
+    sum=$((sum + num1))
+
+    next=$((num1 + num2))
+    num1=$num2
+    num2=$next
+done
+
+echo
+echo "Sum of Fibonacci numbers up to 10: $sum"
+ 
+
+
+---------------------------------------------------
+output:
+
+Fibonacci series up to 10:
+0 1 1 2 3 5 8 
+Sum of Fibonacci numbers up to 10: 20
