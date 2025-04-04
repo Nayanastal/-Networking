@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Prompt the user for the input file name
+read -p "Enter the input file name: " input_file
+
+# Check if the file exists
+if [ ! -f "$input_file" ]; then
+    echo "File not found!"
+    exit 1
+fi
+
+# Remove digits and save to output file
+output_file="output.txt"
+sed 's/[0-9]//g' "$input_file" > "$output_file"
+
+echo "Digits removed successfully. Output saved to $output_file"
