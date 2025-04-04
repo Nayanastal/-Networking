@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "Enter the file name:"
+read INPUT_FILE
+
+if [[ ! -f "$INPUT_FILE" ]]; then
+  echo "Error: The file '$INPUT_FILE' does not exist!"
+  exit 1
+fi
+
+echo "Enter the word to search for and delete the line containing it:"
+read SEARCH_WORD
+
+# Use sed to delete lines containing the word
+# -i: in-place editing
+# /$SEARCH_WORD/: the word to search for
+# d: delete the line
+sed -i "/$SEARCH_WORD/d" "$INPUT_FILE"
+
+
+echo "Lines containing '$SEARCH_WORD' have been deleted from '$INPUT_FILE'."
